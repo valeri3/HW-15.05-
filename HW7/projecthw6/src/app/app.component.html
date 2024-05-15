@@ -1,0 +1,9 @@
+<button class="first-button" (click)="applyDiscount()">Хочу скидку</button>
+
+<app-cards-container (viewDetails)="onProductSelected($event)"></app-cards-container>
+
+<div class="product-details">
+  <span>Назв: {{ selectedProduct?.name }} </span>
+  <span>Цена: {{ discountedPrice(selectedProduct?.price) }}$ </span>
+  <span>Описание: {{ selectedProduct?.description }} </span>
+</div>
